@@ -19,6 +19,7 @@ namespace AE
         [SerializeField] private Ease rotationEase = Ease.OutBack;
 
         [SerializeField] AudioClip voiceline;
+        [SerializeField] string captions;
         [SerializeField] private float voiceCooldown = 8f;
         private float lastVoiceTime = -Mathf.Infinity;
 
@@ -76,6 +77,7 @@ namespace AE
                 {
                     lastVoiceTime = Time.time;
                     audioSource.PlayOneShot(voiceline);
+                    UIManager.instance.SetCaptions(captions, voiceline.length + 0.5f);
                 }
             }
         }

@@ -5,8 +5,9 @@ namespace AE
     public class Sword : MonoBehaviour, IInteractable, IHoldable
     {
 
-        [SerializeField] private AudioClip noteSound;
+        [SerializeField] private AudioClip noteSound, dropSound;
         [SerializeField] private int noteID;
+        
 
         private AudioSource audioSource;
         private OutlineObject outline;
@@ -55,6 +56,7 @@ namespace AE
         public void OnDrop()
         {
             transform.SetParent(null);
+            audioSource.PlayOneShot(dropSound);
             rb.isKinematic = false;
         }
 

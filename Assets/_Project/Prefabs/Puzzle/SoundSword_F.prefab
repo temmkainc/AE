@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.35, y: 0.106, z: -5.172337}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteSound: {fileID: 8300000, guid: 3f4c225fc499c3d44996f07559b6c725, type: 3}
+  dropSound: {fileID: 8300000, guid: 50a96f665a4885d48bf316b2869b9048, type: 3}
   noteID: 1
   isInHolder: 0
   holdRotation: {x: -0.32407424, y: 0.6655672, z: -0.4242262, w: 0.52156335}
@@ -155,7 +156,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 0.45
   Loop: 0
   Mute: 0
@@ -199,7 +200,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

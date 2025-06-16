@@ -19,6 +19,10 @@ namespace AE
         [SerializeField] private float openDuration = 2f;
         [SerializeField] private Ease openEase = Ease.OutBack;
 
+        [SerializeField] private AudioSource chestSource;
+        [SerializeField] private AudioClip chestOpen;
+       
+
         public bool IsSolved { get; private set; }
 
         private void Start()
@@ -48,6 +52,7 @@ namespace AE
             {
                 Debug.Log("Rotating chest lid!");
                 chestLid.DOLocalRotate(openRotation, openDuration)
+                    .OnStart(() => chestSource.PlayOneShot(chestOpen))
                     .SetEase(openEase)
                     .OnComplete(() => Debug.Log("Chest lid opened"));
             }

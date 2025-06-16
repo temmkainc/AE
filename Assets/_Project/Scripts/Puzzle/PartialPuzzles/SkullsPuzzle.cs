@@ -13,7 +13,10 @@ namespace AE
         [Header("Secret Wall")]
         [SerializeField] private Transform secretWall;
         [SerializeField] private float secretWallMoveDistance = 3f; 
-        [SerializeField] private float secretWallMoveDuration = 2f; 
+        [SerializeField] private float secretWallMoveDuration = 2f;
+
+        [SerializeField] private AudioSource wallSource;
+        [SerializeField] private AudioClip stoneWallSound;
 
         public bool IsSolved { get; private set; }
 
@@ -47,7 +50,8 @@ namespace AE
             if (secretWall != null)
             {
                 Vector3 targetPos = secretWall.position + Vector3.down * secretWallMoveDistance;
-                secretWall.DOMove(targetPos, secretWallMoveDuration).SetEase(Ease.InOutSine);
+                secretWall.DOMove(targetPos, secretWallMoveDuration).SetEase(Ease.InOutSine)
+                    .OnStart(() => wallSource.PlayOneShot(stoneWallSound));
             }
         }
     }

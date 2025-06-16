@@ -89,8 +89,10 @@ namespace AE
         }
         public void Interact()
         {
-            if(heldObject != null)
+            if (heldObject != null)
                 ReleaseObject();
+            else
+                UIManager.instance.SetCaptions("Looks like something is missing here...", 3f);
         }
 
         public bool CanInteract()

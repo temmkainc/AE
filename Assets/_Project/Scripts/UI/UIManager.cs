@@ -24,7 +24,7 @@ namespace AE
 
         public static UIManager instance;
 
-        public Text interactionHint;
+        public Text interactionHint, captions;
 
         private void Awake()
         {
@@ -38,13 +38,11 @@ namespace AE
         {
             StringBuilder sb = new StringBuilder();
 
-            // Add Interact hint
             if (interactInfo == InteractInfo.Interact)
             {
                 sb.Append("[LMB] Interact\n");
             }
 
-            // Add Pickup/Drop hint
             switch (pickupInfo)
             {
                 case PickupInfo.Pickup:
@@ -56,6 +54,17 @@ namespace AE
             }
 
             interactionHint.text = sb.ToString().TrimEnd(); // remove trailing newline
+        }
+
+        public void SetCaptions(string text, float timeToDisable)
+        {
+            captions.text = text;
+            Invoke("MakeCaptionsEmpty", timeToDisable);
+        }
+
+        private void MakeCaptionsEmpty()
+        {
+            captions.text = string.Empty;
         }
 
         public void ResetHints()

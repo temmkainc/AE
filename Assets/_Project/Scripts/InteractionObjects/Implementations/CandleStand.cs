@@ -10,6 +10,10 @@ namespace AE
 
         private OutlineObject outline;
 
+        private AudioSource audioSource;
+        [SerializeField] private AudioClip lightUp, blowUp, burningLoop;
+        private AudioSource loopSource;
+
         [SerializeField] private GameObject lightenedUpPart;
 
         public bool isLit;
@@ -20,6 +24,12 @@ namespace AE
         private void Awake()
         {
             outline = GetComponent<OutlineObject>();
+            audioSource = GetComponent<AudioSource>();
+
+            loopSource = gameObject.AddComponent<AudioSource>();
+            loopSource.loop = true;
+            loopSource.spatialBlend = 1f;
+            loopSource.playOnAwake = false;
         }
 
         public void OnHighlight()
@@ -38,7 +48,22 @@ namespace AE
         {
             lightenedUpPart.SetActive(!lightenedUpPart.activeSelf);
             isLit = lightenedUpPart.activeSelf;
-            OnStateChanged?.Invoke();
+            if (!audioSource.isPlaying)
+            {
+                if (isLit)
+                {
+                    audioSource.PlayOneShot(lightUp);
+
+                    loopSource.clip = burningLoop;
+                    loopSource.Play();
+                }
+                else
+                {
+                    audioSource.PlayOneShot(blowUp);
+                    loopSource.Stop();
+                }
+                OnStateChanged?.Invoke();
+            }
         }
 
         public bool CanInteract()

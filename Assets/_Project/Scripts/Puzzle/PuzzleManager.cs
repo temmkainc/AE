@@ -15,8 +15,12 @@ namespace AE
         [SerializeField] private float secretWallMoveDistance = 3f;
         [SerializeField] private float secretWallMoveDuration = 2f;
 
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip metalGateClip;
+
         private void Start()
         {
+            audioSource = GetComponent<AudioSource>();
             foreach (var script in puzzleScripts)
             {
                 if (script is IPuzzle puzzle)
@@ -47,7 +51,8 @@ namespace AE
             if (finalWall != null)
             {
                 Vector3 targetPos = finalWall.position + Vector3.down * secretWallMoveDistance;
-                finalWall.DOMove(targetPos, secretWallMoveDuration).SetEase(Ease.InOutSine);
+                finalWall.DOMove(targetPos, secretWallMoveDuration).SetEase(Ease.InOutSine)
+                    .OnStart(() => audioSource.PlayOneShot(metalGateClip));
             }
 
         }

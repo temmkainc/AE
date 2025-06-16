@@ -150,7 +150,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.76
+      scalar: 0.96
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -203,7 +203,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.26
+      scalar: 1.74
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -321,7 +321,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.56
+      scalar: 0.12
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -785,7 +785,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 2.2
+      value: 2.9
       mode: 0
       spread: 0
       speed:
@@ -4908,7 +4908,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8249657472930738185}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 2.64
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -4983,7 +4983,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.65
+      scalar: 8.63
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5036,7 +5036,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5.49
+      scalar: 0.54
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5154,7 +5154,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.27
+      scalar: 0.24
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5618,7 +5618,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.0001
+      value: 1.57
       mode: 0
       spread: 0
       speed:
@@ -5737,7 +5737,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 2.65
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9691,7 +9691,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -9869,7 +9869,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5.49
+      scalar: 3.03
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9987,7 +9987,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.37
+      scalar: 0.12
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10451,7 +10451,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.0001
+      value: 1.02
       mode: 0
       spread: 0
       speed:

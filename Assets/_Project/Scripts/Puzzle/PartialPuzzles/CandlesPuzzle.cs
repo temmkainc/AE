@@ -15,6 +15,7 @@ namespace AE
         [SerializeField] private Transform swordSpawnPoint;
 
         [SerializeField] private Transform chestLid;
+        [SerializeField] private ChestWithSword chest;
         [SerializeField] private Vector3 openRotation = new Vector3(-75f, 0f, 0f);
         [SerializeField] private float openDuration = 2f;
         [SerializeField] private Ease openEase = Ease.OutBack;
@@ -55,11 +56,15 @@ namespace AE
                     .OnStart(() => chestSource.PlayOneShot(chestOpen))
                     .SetEase(openEase)
                     .OnComplete(() => Debug.Log("Chest lid opened"));
+
+                UIManager.instance.SetCaptions("[Chest unlocked]", 3f);
             }
 
             if (swordPrefab != null && swordSpawnPoint != null)
             {
                 Instantiate(swordPrefab, swordSpawnPoint.position, swordSpawnPoint.rotation);
+                chest.isLocked = true;
+                swordPrefab.GetComponent<Sword>();
             }
 
             Debug.Log("Candle puzzle solved!");

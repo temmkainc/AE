@@ -128,6 +128,8 @@ MonoBehaviour:
   noteSound: {fileID: 8300000, guid: 3f4c225fc499c3d44996f07559b6c725, type: 3}
   dropSound: {fileID: 8300000, guid: 50a96f665a4885d48bf316b2869b9048, type: 3}
   noteID: 1
+  audioSource: {fileID: 785910518468995739}
+  rb: {fileID: 8686497321010629066}
   isInHolder: 0
   holdRotation: {x: -0.32407424, y: 0.6655672, z: -0.4242262, w: 0.52156335}
 --- !u!114 &6813671828676196385

@@ -10,6 +10,10 @@ namespace AE
         private OutlineObject outline;
         private AudioSource audioSource;
 
+        [SerializeField] private AudioSource rotationAudioSource;
+        [SerializeField] private AudioClip skullRotationClip;
+        
+
         public UnityEvent OnStateChanged;
         public enum Direction { North, East, South, West }
 
@@ -56,6 +60,8 @@ namespace AE
                 .OnComplete(() => isRotating = false);
 
             OnStateChanged?.Invoke();
+
+            rotationAudioSource.PlayOneShot(skullRotationClip);
 
         }
 

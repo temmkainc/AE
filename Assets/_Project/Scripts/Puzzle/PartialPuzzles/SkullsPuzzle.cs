@@ -52,6 +52,8 @@ namespace AE
                 Vector3 targetPos = secretWall.position + Vector3.down * secretWallMoveDistance;
                 secretWall.DOMove(targetPos, secretWallMoveDuration).SetEase(Ease.InOutSine)
                     .OnStart(() => wallSource.PlayOneShot(stoneWallSound));
+
+                UIManager.instance.SetCaptions("[Wall moved]", 3f);
             }
         }
     }

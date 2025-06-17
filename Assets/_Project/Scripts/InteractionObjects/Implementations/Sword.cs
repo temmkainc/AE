@@ -8,16 +8,15 @@ namespace AE
         [SerializeField] private AudioClip noteSound, dropSound;
         [SerializeField] private int noteID;
         
-
-        private AudioSource audioSource;
+ private AudioSource audioSource;
         private OutlineObject outline;
-
+       
         private Rigidbody rb;
 
         public bool isInHolder;
         [SerializeField] Quaternion holdRotation;
 
-        private void Awake()
+        private void Start()
         {
             outline = GetComponent<OutlineObject>();
             audioSource = GetComponent<AudioSource>();

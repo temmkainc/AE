@@ -7,9 +7,6 @@ namespace AE
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip lockedSound;
 
-
-        public bool isLocked;
-
         private OutlineObject outline;
 
         private void Awake()
@@ -20,7 +17,7 @@ namespace AE
 
         public bool CanInteract()
         {
-            return isLocked;
+            return true;
         }
 
         public void Interact()
@@ -38,6 +35,11 @@ namespace AE
         public void OnUnhighlight()
         {
             outline?.EnableOutline(false);
+        }
+
+        public void OnChestOpened()
+        {
+            Destroy(this);
         }
     }
 }

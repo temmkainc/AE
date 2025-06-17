@@ -63,7 +63,8 @@ namespace AE
             if (swordPrefab != null && swordSpawnPoint != null)
             {
                 Instantiate(swordPrefab, swordSpawnPoint.position, swordSpawnPoint.rotation);
-                chest.isLocked = true;
+                chest.OnChestOpened();
+
                 swordPrefab.GetComponent<Sword>();
             }
 

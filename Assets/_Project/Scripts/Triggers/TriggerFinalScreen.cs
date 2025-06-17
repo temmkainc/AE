@@ -37,6 +37,12 @@ namespace AE
         {
             finalScreen.SetActive(true);
             audioSource.PlayOneShot(finalClip);
+            Invoke("CloseApplication", 10f);
+        }
+
+        private void CloseApplication()
+        {
+            Application.Quit();
         }
 
     }

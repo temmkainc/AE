@@ -1,7 +1,8 @@
 # AE - Environmental Puzzle (Unity)
 
-This project is a collection of environmental puzzles created in Unity.  
+This project is a collection of environmental puzzles created in Unity that was made as a Test Task.  
 The player must solve a series of interactive challenges to obtain magical swords and unlock a hidden passage.
+[Video of the gameplay and SOLUTION of the Puzzle](https://www.youtube.com/watch?v=VwZ3rX6HTqw)
 
 The [DOTween](http://dotween.demigiant.com/) asset is used for smooth animations and transitions.
 Voicelines of skulls were recorded and pitched by myself.
